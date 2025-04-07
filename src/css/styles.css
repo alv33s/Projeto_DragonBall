@@ -1,0 +1,114 @@
+body{
+    background-color: black ;
+    color: white;
+    overflow: hidden; /* retira a barra de rolagem da tela */
+}
+
+main::after{
+    content: '';
+    position: fixed; /* fixa a imagem de fundo na tela */
+    top: 0;
+    left: 0;
+    min-height: 100vh; /* ocupa uma altura de 100% da tela que tenha para ocupar*/
+    width: 80vh; /* ocupa uma largura de 80% da tela*/
+    background: linear-gradient(to right, black 25%, rgba(0, 0, 0, 0)); /* imagem de fundo */
+
+}
+
+main .personagem{
+    display: none; /* Retira todas imagens */
+    height: 100vh; /* ocupa uma altura de 100% da tela que tenha para ocupar*/
+}
+
+main .personagem.selecionado{
+    display: block; /* Retira todas imagens e deixa apenas aquelas com a classe .personagem e .selecionado */
+    
+}
+
+main .personagem .imagem{
+    width: 100%;  /* ocupa uma largura de 100% da tela*/
+    height: 100%; /* ocupa uma altura de 100% da tela*/
+    object-fit: cover; /* faz com que a imagem ocupe todo o espaço disponível da caixa na qual ela está */
+}
+
+.conteudo{
+    
+    position: absolute;
+    top: 0;
+    left: 120px;
+
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    max-width: 380px;
+    font-size: 20px;
+
+    z-index: 1; /* garante que o conteúdo fique acima da imagem de fundo */
+
+}
+ 
+.conteudo .nome-personagem{
+    font-size: 48px;
+    font-family: "Secular One";
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.conteudo .descricao{
+    font-size: 16px;
+    font-family: "Rubik";
+    line-height: 24px;
+
+
+}
+
+.botoes{
+    display: flex;
+    right: 0;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    width: 180px;
+    min-height: 100vh; /* ocupa no minimo uma altura de 100% da tela que tenha para ocupar*/
+    background-color: rgba(0, 0, 0, 0.3); /* imagem de fundo */
+    align-items: center; /* centraliza os botões na vertical */
+    gap: 16px; /* espaço entre os botões */
+
+}
+
+.botoes .botao{
+    border: none;
+    background-color: rgba(0, 0, 0, 0); /* retira a cor de fundo do botão */
+    width: 90px; /* largura do botão */
+    height: 90px; /* altura do botão */
+    cursor: pointer; /* muda o cursor para uma mãozinha ao passar o mouse sobre o botão */
+    transition: transform 0.3s ease; /* animação de transição ao passar o mouse sobre o botão */
+    border-radius: 50%; /* borda arredondada */
+    
+}
+
+.botoes .botao img {
+    border-radius: 50%; /* borda arredondada */
+}
+
+.botoes .botao.selecionado { 
+    transform: scale(1.2); /* aumenta o tamanho do botão ao passar o mouse sobre ele */
+}
+
+.botoes .botao.cyberstorm.selecionado { 
+    box-shadow: 0 0 15px #47FFC5; /* sombra ao redor do botão */
+}
+.botoes .botao.codepixie.selecionado { 
+    box-shadow: 0 0 15px #9747ff; /* sombra ao redor do botão */
+}
+.botoes .botao.hexblade.selecionado { 
+    box-shadow: 0 0 15px #ffa947; /* sombra ao redor do botão */
+}
+.botoes .botao.neonpulse.selecionado { 
+    box-shadow: 0 0 15px #e4309a; /* sombra ao redor do botão */
+}
+.botoes .botao.codebraker.selecionado { 
+    box-shadow: 0 0 15px #fff047; /* sombra ao redor do botão */
+}
