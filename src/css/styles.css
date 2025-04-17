@@ -67,9 +67,9 @@ main .personagem .imagem{
     display: flex;
     right: 0;
     top: 0;
-    flex-direction: column;
-    justify-content: center;
-    position: fixed;
+    flex-direction: column; /* organiza os botões na vertical */
+    justify-content: center; /* centraliza os botões na vertical */
+    position: fixed; /* fixa os botões na tela */
     width: 180px;
     min-height: 100vh; /* ocupa no minimo uma altura de 100% da tela que tenha para ocupar*/
     background-color: rgba(0, 0, 0, 0.3); /* imagem de fundo */
@@ -94,7 +94,7 @@ main .personagem .imagem{
 }
 
 .botoes .botao.selecionado { 
-    transform: scale(1.2); /* aumenta o tamanho do botão ao passar o mouse sobre ele */
+    transform: scale(1.2); /* aumenta o tamanho do botão ao ser selecionado */
 }
 
 .botoes .botao.cyberstorm.selecionado { 
